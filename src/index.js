@@ -1,10 +1,11 @@
 const express = require('express');
+const crypto = require('crypto');
 const app = express();
 const port = 3000;
 
 // Middleware to parse JSON bodies
 app.use(express.json());
-import {v4 as uuidv4} from 'uuid';
+
 
 // **************************************************************
 // Put your implementation here
@@ -14,7 +15,7 @@ const users = []
 app.post('/users', (req, res) => {
     try {
         // make a uuid then build the user
-        const uuid = uuidv4();
+        const uuid = crypto.randomUUID();
         const user = { id: uuid, ...req.body };
 
         // if the user we built doesn't have name or email, return error

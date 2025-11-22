@@ -2,6 +2,7 @@
   "name": "microservice-api-js-template",
   "version": "1.0.0",
   "description": "",
+  "type": "commonjs",
   "main": "index.js",
   "scripts": {
     "start": "node src/index.js",
@@ -11,6 +12,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "crypto": "^1.0.1",
     "express": "^4.21.1",
     "uuid": "^13.0.0"
   },
